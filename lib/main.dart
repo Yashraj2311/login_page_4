@@ -4,7 +4,7 @@ import 'package:login_signup/theme/theme.dart';
 import 'package:firebase_core/firebase_core.dart';
 
 
-void main() async {
+Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized(); // Ensure Flutter is initialized
   await Firebase.initializeApp(); // Initialize Firebase
   runApp(const MyApp());
@@ -18,7 +18,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Attendance App',
+      title: 'Flutter Demo',
       theme: lightMode,
       home: const WelcomeScreen(),
     );
